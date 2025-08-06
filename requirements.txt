@@ -10,3 +10,5 @@ sentence-transformers
 pdfplumber
 PyMuPDF
 gtts
+fpdf
+pydub
