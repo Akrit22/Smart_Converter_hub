@@ -1,0 +1,12 @@
+streamlit
+PyPDF2
+pyttsx3
+SpeechRecognition
+pyaudio
+nltk
+transformers
+torch
+sentence-transformers
+pdfplumber
+PyMuPDF
+gtts
