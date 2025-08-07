@@ -155,7 +155,6 @@ st.sidebar.markdown("""
 ### Best Practices:
 - Use text-based PDFs
 - Check extracted text preview
-- Adjust speech rate for comfort
 - Test with small files first
 
 ### File Requirements:

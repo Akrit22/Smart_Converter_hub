@@ -203,11 +203,6 @@ st.sidebar.markdown("""
 - **Upload:** .txt, .md, .csv files
 - **Paste:** Copy-paste from anywhere
 
-### Voice Options:
-- **Gender:** Male/Female voices
-- **Speed:** 100-300 WPM
-- **Volume:** Adjustable levels
-- **Format:** MP3 or WAV output
 
 ### Best Practices:
 - Use proper punctuation
