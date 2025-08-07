@@ -91,32 +91,12 @@ if text_content:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("#### 🗣️ Voice Settings")
-        voice_gender = st.selectbox(
-            "Voice Type",
-            ["Female", "Male"],
-            help="Select preferred voice gender"
-        )
-
-        voice_rate = st.slider(
-            "Speech Rate (Words per minute)",
-            100, 300, 200, 10,
-            help="Adjust how fast the voice speaks"
-        )
+        st.markdown("#### ⚙️ Audio Format")
+        st.markdown("Using default voice (Google TTS)")
 
     with col2:
-        st.markdown("#### 🔊 Audio Settings")
-        voice_volume = st.slider(
-            "Volume Level",
-            0.1, 1.0, 0.8, 0.1,
-            help="Adjust audio volume"
-        )
+        audio_format = "MP3"  # gTTS supports only MP3
 
-        audio_format = st.selectbox(
-            "Output Format",
-            ["MP3", "WAV"],
-            help="Choose audio file format"
-        )
 
     # Preview section
     st.markdown("#### 🔍 Text Preview")
@@ -146,10 +126,7 @@ if text_content.strip():
                         # Convert text to audio
                         audio_file = TextToAudioConverter.convert_text_to_audio(
                             text_content,
-                            output_path,
-                            rate=voice_rate,
-                            volume=voice_volume,
-                            voice_gender=voice_gender.lower()
+                            output_path
                         )
 
                         if audio_file and os.path.exists(audio_file):

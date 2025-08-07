@@ -55,19 +55,7 @@ with col1:
         # Display file info
         st.info(f"📊 File size: {uploaded_file.size / 1024:.1f} KB")
 
-with col2:
-    st.subheader("🎵 Audio Settings")
-
-    # Voice settings
-    voice_rate = st.slider("🗣️ Speech Rate", 100, 300, 200, 10, 
-                          help="Higher values = faster speech")
-
-    voice_volume = st.slider("🔊 Volume", 0.1, 1.0, 0.8, 0.1,
-                           help="Audio volume level")
-
-    voice_gender = st.selectbox("👤 Voice Type", ["Female", "Male"], 
-                               help="Select preferred voice gender")
-
+    
 # Conversion section
 if uploaded_file is not None:
     st.markdown("---")
@@ -94,10 +82,9 @@ if uploaded_file is not None:
                             st.info("🔊 Converting text to audio...")
 
                             # Convert to audio
-                            output_path = "temp/audiobook.wav"
-                            audio_file = PDFToAudioConverter.text_to_audio(
-                                text, output_path, rate=voice_rate, volume=voice_volume
-                            )
+                            output_path = "temp/audiobook.mp3"
+                            audio_file = PDFToAudioConverter.text_to_audio(text, output_path)
+
 
                             if audio_file and os.path.exists(audio_file):
                                 st.success("✅ Conversion completed successfully!")
@@ -105,14 +92,14 @@ if uploaded_file is not None:
                                 # Display audio player
                                 st.subheader("🎵 Your Audiobook")
                                 audio_file_data = open(audio_file, 'rb').read()
-                                st.audio(audio_file_data, format='audio/wav')
+                                st.audio(audio_file_data, format='audio/mp3')
 
                                 # Download button
                                 st.download_button(
                                     label="📥 Download Audiobook",
                                     data=audio_file_data,
-                                    file_name=f"{uploaded_file.name.replace('.pdf', '_audiobook.wav')}",
-                                    mime="audio/wav",
+                                    file_name=f"{uploaded_file.name.replace('.pdf', '_audiobook.mp3')}",
+                                    mime="audio/mp3",
                                     use_container_width=True
                                 )
 

@@ -4,6 +4,7 @@ import os
 import tempfile
 import PyPDF2
 import pyttsx3
+from gtts import gTTS
 import speech_recognition as sr
 import nltk
 import pdfplumber
@@ -39,20 +40,10 @@ class PDFToAudioConverter:
 
     @staticmethod
     def text_to_audio(text, output_path="output_audio.mp3", rate=200, volume=0.8):
-        """Convert text to audio file"""
+        """Convert text to audio using gTTS"""
         try:
-            engine = pyttsx3.init()
-
-            # Set properties
-            voices = engine.getProperty('voices')
-            if voices:
-                engine.setProperty('voice', voices[1].id if len(voices) > 1 else voices[0].id)
-            engine.setProperty('rate', rate)
-            engine.setProperty('volume', volume)
-
-            # Save audio
-            engine.save_to_file(text, output_path)
-            engine.runAndWait()
+            tts = gTTS(text=text, lang='en')
+            tts.save(output_path)
             return output_path
         except Exception as e:
             st.error(f"Error converting text to audio: {e}")
@@ -61,31 +52,18 @@ class PDFToAudioConverter:
 class TextToAudioConverter:
     """Handles Text to Audio conversion"""
 
+
     @staticmethod
-    def convert_text_to_audio(text, output_path="text_audio.mp3", rate=200, volume=0.8, voice_gender="female"):
-        """Convert plain text to audio"""
+    def convert_text_to_audio(text, output_path="text_audio.mp3", **kwargs):
+        """Convert plain text to audio using gTTS"""
         try:
-            engine = pyttsx3.init()
-
-            # Set voice
-            voices = engine.getProperty('voices')
-            if voices:
-                if voice_gender == "female" and len(voices) > 1:
-                    engine.setProperty('voice', voices[1].id)
-                else:
-                    engine.setProperty('voice', voices[0].id)
-
-            # Set properties
-            engine.setProperty('rate', rate)
-            engine.setProperty('volume', volume)
-
-            # Save audio
-            engine.save_to_file(text, output_path)
-            engine.runAndWait()
+            tts = gTTS(text=text, lang='en')
+            tts.save(output_path)
             return output_path
         except Exception as e:
             st.error(f"Error converting text to audio: {e}")
             return None
+
 
 class PDFSummarizer:
     """Handles PDF text summarization"""
