@@ -167,9 +167,6 @@ streamlit run Homepage.py
 ### 🔄 Homepage
 ![Homepage](images/h1.png)
 
-### 📄 PDF to Audio
-![PDF to Audio](images/h2.png)
-
 ### 📝 Text to Audio
 ![Text to Audio](images/h3.png)
 
