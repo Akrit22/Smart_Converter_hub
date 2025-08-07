@@ -3,7 +3,6 @@ import io
 import os
 import tempfile
 import PyPDF2
-import pyttsx3
 from gtts import gTTS
 import speech_recognition as sr
 import nltk
