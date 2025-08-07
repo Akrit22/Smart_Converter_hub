@@ -3,6 +3,20 @@
 A comprehensive and elegant **Streamlit-based web application** for intelligent file conversion. Transform PDFs, text, and audio into insightful and accessible formats using AI-powered tools.
 
 ---
+## 🚀 Live Demos
+
+### 🌐 Streamlit Cloud  
+[![Streamlit Cloud](https://img.shields.io/badge/Streamlit-Live_App-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)](https://fulatx9v7y4wfoq4apwkr8.streamlit.app/)
+
+👉 [https://fulatx9v7y4wfoq4apwkr8.streamlit.app/](https://fulatx9v7y4wfoq4apwkr8.streamlit.app/)
+
+---
+
+### ☁️ Render Deployment  
+[![Render](https://img.shields.io/badge/Render-Live_App-4f2c89?style=for-the-badge&logo=render&logoColor=white)](https://smart-converter-hub.onrender.com/)
+
+👉 [https://smart-converter-hub.onrender.com/](https://smart-converter-hub.onrender.com/)
+
 
 ## 🌟 Features
 
