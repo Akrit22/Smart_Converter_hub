@@ -79,7 +79,7 @@ Smart_Converter_Hub/
 ### Core Libraries
 - **streamlit**: Web application framework
 - **PyPDF2**: PDF text extraction
-- **pyttsx3**: Text-to-speech conversion
+- **gtts**: Google Text-to-Speech conversion
 - **SpeechRecognition**: Audio-to-text conversion
 - **nltk**: Natural language processing
 - **pdfplumber**: Advanced PDF processing
