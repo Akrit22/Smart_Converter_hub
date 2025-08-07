@@ -1,6 +1,5 @@
 streamlit
 PyPDF2
-pyttsx3
 SpeechRecognition
 nltk
 transformers
