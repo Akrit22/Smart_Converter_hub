@@ -22,7 +22,6 @@ A comprehensive and elegant **Streamlit-based web application** for intelligent 
 
 ### 📄 PDF to Audiobook Converter
 - Convert PDF documents into high-quality audio files
-- Adjustable speech rate, volume, and gender
 - Ideal for visually impaired users and on-the-go listening
 
 ### 📝 Text to Audio Converter  
